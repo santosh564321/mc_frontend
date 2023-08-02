@@ -1,6 +1,3 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
   height: 40vmin;
@@ -16,10 +13,10 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -35,4 +32,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* This is to hide the scrollbar on Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* This is the container for the scrollbar, usually the * or the element with scroll */
+*::-webkit-scrollbar {
+  width: 10px; /* adjust as necessary */
+  height: 10px;
+}
+
+/* This is the actual scrollbar (the bar you drag) */
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  cursor: pointer;
+}
+
+/* This is the track of the scrollbar (the background) */
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* This is the button on the scrollbar (the arrows pointing up and down) */
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* This is the draggable scrolling handle */
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
 }
