@@ -18,5 +18,5 @@ artifacts:
   # include all files required to run application
   # notably excluded is node_modules, as this will cause overwrite error on deploy
   files:
-    - '**/*'
-  base-directory: builds
+    - 'build/*'
+    - 'build/**/*'
