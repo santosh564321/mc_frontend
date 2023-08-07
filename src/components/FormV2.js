@@ -1,32 +1,33 @@
 import React, { Component } from 'react'
+import axios from "axios";
 import './FormV2.css'
 class FormV2 extends Component {
     constructor(props) {
       super(props)
     
       this.state = {
-        stock : '',
-        startDate: '',
-        endDate: '',
-        daysForTheAnalysis: '',
-        stockPricePaths: '',
-        iterations:'',
-        daysInMCmodel: '',
-        modelPeriodSpendCap: '',
-        dailyCostAvg: '',
-        dailyMinSpend: '',
-        limitPrice1: '',
-        limitPrice2: '',
-        limitPrice3: '',
-        limitPrice4: '',
-        dailySpend1: '',
-        dailySpend2: '',
-        dailySpend3: '',
-        dailySpend4: '',
-        dailySpendPar: '',
-        dailySpendPercent2Below: '',
-        dailySpendPercent4Below: '',
-        currentLevel: '',
+        stock : 'ADSK',
+        startDate: '2023/06/15',
+        endDate: '2023/06/30',
+        noOfDaysInAnalysis: 35,
+        stockPricePaths: 60,
+        noOfIterations:1000,
+        daysInMCmodel: 90,
+        modelPeriodSpendCap: 456000,
+        dailyCostAvg: 250000,
+        dailyMinSpend: 100000,
+        limitPrice1: 230,
+        limitPrice2: 215,
+        limitPrice3: 210,
+        limitPrice4: 205,
+        dailySpend1: 250000,
+        dailySpend2: 360000,
+        dailySpend3: 400000,
+        dailySpend4: 500000,
+        dailySpendPar: 300000,
+        dailySpendPercent2Below: 234000,
+        dailySpendPercent4Below: 200000,
+        currentLevel: 200.88,
         loader: false,
       }
     }
@@ -42,19 +43,22 @@ class FormV2 extends Component {
             })
         }
     }
-
+    componentDidMount() {
+       console.log( localStorage.getItem("formState") )
+    }
 
     handleSubmit = (e) => {
+        localStorage.setItem("formState",JSON.stringify(this.setState))
         this.setState({loader: true})
         e.preventDefault();
-        // axios.post('https://c1536q3eob.execute-api.us-east-1.amazonaws.com/calculate',this.state).then( response => {
-        //     console.log(response.data)
-        //     this.props.onResponse(response.data)
-        //     this.setState({loader:false})
-        // }).catch(err => {
-        //     console.log(err)
-        // })
-        console.log(this.state)
+        axios.post('http://54.85.0.55/calculate',this.state).then( response => {
+            console.log(response.data)
+            this.props.onResponse(response.data)
+            this.setState({loader:false})
+        }).catch(err => {
+            console.log(err)
+        })
+        // console.log(this.state)
     };
   render() {
 
@@ -62,9 +66,9 @@ class FormV2 extends Component {
         stock,
         startDate,
         endDate,
-        daysForTheAnalysis,
+        noOfDaysInAnalysis,
         stockPricePaths,
-        iterations,
+        noOfIterations,
         daysInMCmodel,
         modelPeriodSpendCap,
         dailyCostAvg,
@@ -81,7 +85,7 @@ class FormV2 extends Component {
         dailySpendPercent2Below,
         dailySpendPercent4Below,
         currentLevel,
-        loader
+        loader,
       } = this.state
     return (
         <React.Fragment>
@@ -103,7 +107,7 @@ class FormV2 extends Component {
                 </div>
                 <div className="input-container">
                     <label className='input-form-label'>No of days for the Analysis</label>
-                    <input type="number" value={daysForTheAnalysis} onChange={this.handleFormChange} name='daysForTheAnalysis'/>
+                    <input type="number" value={noOfDaysInAnalysis} onChange={this.handleFormChange} name='noOfDaysInAnalysis'/>
                 </div>
                 <div className="input-container">
                     <label className='input-form-label'>Number of Stock Price Paths</label>
@@ -111,7 +115,7 @@ class FormV2 extends Component {
                 </div>
                 <div className="input-container long-input-field">
                     <label className='input-form-label'>Number of Iterations</label>
-                    <input type="number" value={iterations} onChange={this.handleFormChange} name='iterations'/>
+                    <input type="number" value={noOfIterations} onChange={this.handleFormChange} name='noOfIterations'/>
                 </div>
             </div>
 

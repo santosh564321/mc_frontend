@@ -1,0 +1,41 @@
+.main-table{
+    width: 90%;
+    height: 90%;
+    max-height: 80vh;
+    max-width: 73vw;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+.main-table table{
+    border-collapse: collapse;
+}
+
+.main-table-container h3{
+    font-size: 30px;
+    margin: 0 0 20px 0;
+}
+.main-table-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-table table tr td{
+    padding: 0 10px;
+}
+.main-table table tr{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.main-table table thead tr th:nth-child(even){
+    background-color: #D9D9D9;
+    color: #585656;
+}
+
+.main-table table thead tr th:nth-child(odd){
+    background-color: #ECECEC;
+    color: #585656
+}
+

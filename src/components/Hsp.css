@@ -1,0 +1,32 @@
+.hsp-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hsp-container table{
+    width: 80%;
+    height: 80%;
+    max-height: 90vh;
+    max-width: 70vw;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    border-collapse: collapse;
+}
+.hsp-container table tr{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+.hsp-container table tr td{
+    text-align: center;
+    padding: 5px;
+}
+
+.hsp-container table thead tr th:nth-child(even){
+    background-color: #D9D9D9;
+    color: #585656;
+}
+
+.hsp-container table thead tr th:nth-child(odd){
+    background-color: #ECECEC;
+    color: #585656
+}

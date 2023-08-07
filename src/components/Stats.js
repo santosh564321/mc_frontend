@@ -12,7 +12,7 @@ function Stats({stats,title,isCurrency}) {
         <table className='stats-table'>
     <thead>
         <tr>
-            <th colspan="2">{title}</th>
+            <th colspan="2">{title.toUpperCase()}</th>
         </tr>
     </thead>
     <tbody>
