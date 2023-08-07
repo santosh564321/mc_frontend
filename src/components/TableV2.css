@@ -34,6 +34,10 @@ h3{
     color: #585656;
 }
 
+.main-table thead{
+    position: sticky;
+}
+
 .main-table table thead tr th:nth-child(odd){
     background-color: #ECECEC;
     color: #585656

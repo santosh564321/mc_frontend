@@ -51,7 +51,7 @@ function ProjectionV2() {
               case 'HSP': return <Hsp data={response.closingPrices}/>
               default: return <>{!responseSuccess && <FormV2 onResponse={onResponse}></FormV2>}
               {responseSuccess && <>
-                <InfoDisp info={response} className="info-display-container"></InfoDisp>
+                <InfoDisp info={response} iterations={response.mcTable.length} className="info-display-container"></InfoDisp>
                 <div className="stats-container">
                   <Stats stats={response.stats} title="Stats" isCurrency="true" />
                   <Stats stats={response.sharesStats} title="Shares Stats" />
