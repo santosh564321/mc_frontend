@@ -2,7 +2,8 @@ import React from 'react'
 import './Hsp.css'
 function Hsp({data}) {
   return (
-    <div className='hsp-container't>
+    <div className='hsp-container'>
+        <h3>Historic Stock Price</h3>
         <table className='hsp-table'>
             <thead>
                 <tr>

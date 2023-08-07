@@ -37,7 +37,7 @@ function ProjectionV2() {
       </div>
       <div className="inner-container">
         <div className="sidebar-container">
-          <Sidebar changeRoute={changeRoute}></Sidebar>
+          <Sidebar changeRoute={changeRoute} responseSuccess = {responseSuccess} route={route}></Sidebar>
         </div>
         <div className="content">
           <div className="content-heading">

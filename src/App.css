@@ -48,7 +48,7 @@
 
 /* This is the actual scrollbar (the bar you drag) */
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(187, 187, 187, 0.703);
   border-radius: 8px;
   border: 2px solid transparent;
   background-clip: content-box;
@@ -67,6 +67,6 @@
 
 /* This is the draggable scrolling handle */
 *::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.903);
   cursor: pointer;
 }
