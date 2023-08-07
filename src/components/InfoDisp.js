@@ -1,6 +1,7 @@
 import React from 'react'
 import './InfoDisp.css'
 import moment from 'moment'
+import ExcelIcon from '../excel.png'
 
 function InfoDisp({info, iterations}) {
     let startDate = moment(info.startDate)
@@ -36,6 +37,8 @@ function InfoDisp({info, iterations}) {
                     </td>
                 </tr>
             </table>
+            <p><button className='table-export-btn'><img src={ExcelIcon}/><span>Export Model to Excel</span></button></p>
+
         </div>
     </React.Fragment>
   )

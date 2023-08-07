@@ -45,7 +45,7 @@ function ProjectionV2() {
           </div>
           {(() => {
             switch(route) {
-              case 'MC': return <TableV2 data={response.mcTable} title="MC Table" />
+              case 'MC': return <TableV2 data={response.mcTable} title="Stock Price Paths" />
               case 'SMA' : return <TableV2 data={response.sma} title="SMA Table" />
               case 'SS': return <TableV2 data={response.snSpend} title="Scenario Spend Table" />
               case 'HSP': return <Hsp data={response.closingPrices}/>

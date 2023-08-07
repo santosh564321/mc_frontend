@@ -36,6 +36,12 @@
     -moz-box-shadow: 0px 0px 14px 1px rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 14px 1px rgba(255, 255, 255, 1);
 }
+
+.sidebar-button:disabled{
+    box-shadow: none;
+    cursor:not-allowed;
+}
+
 .sidebar-button:last-child{
     grid-row-start: 7;
 }
@@ -43,4 +49,15 @@
 .sidebar-button-active{
     background-color: #000;
     color: white;
+}
+
+.reset-button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    transform: scale(0.42);
+}
+
+.reset-button:hover{
+    box-shadow: none;
 }

@@ -140,14 +140,19 @@ class FormV2 extends Component {
             </div>
             <div className="input-container">
               <label className="input-form-label">
-                No of days for the Analysis
+                Days to Consider
               </label>
-              <input
+              <select
                 type="number"
                 value={noOfDaysInAnalysis}
                 onChange={this.handleFormChange}
                 name="noOfDaysInAnalysis"
-              />
+              >
+                <option value={20}>20</option>
+                <option value={50}>50</option>
+                <option value={100}>100</option>
+                <option value={200}>200</option>
+              </select>
             </div>
             <div className="input-container">
               <label className="input-form-label">

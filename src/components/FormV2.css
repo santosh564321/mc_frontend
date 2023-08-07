@@ -33,7 +33,7 @@
     grid-column: span 2;
 }
 
-.input-container input{
+.input-container input, .input-container select{
     width: calc(100% - 16px);
     height: 50px;
     margin-top: 10px;
@@ -42,6 +42,11 @@
     padding-left: 8px;
     padding-right: 8px;
     outline: none;
+}
+
+.input-container select{
+    height: 52px;
+    width: 100%;
 }
 
 .add-bottom-margin{

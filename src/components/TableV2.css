@@ -43,3 +43,28 @@ h3{
     color: #585656
 }
 
+.table-export-btn{
+    all: unset;
+    border: 1px solid white;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px; 
+    transition: 0.2s;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-export-btn span{
+    margin-left: 4px;
+}
+
+.table-export-btn:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.352);
+    transition: 0.2s;
+}
+

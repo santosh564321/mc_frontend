@@ -1,10 +1,12 @@
 import React from 'react'
 import './TableV2.css'
+import ExcelIcon from '../excel.png'
 
 function TableV2({title, data}) {
   return (
     <div className='main-table-container'>
     <h3>{title}</h3>
+    <p><button className='table-export-btn'><img src={ExcelIcon}/><span>Export to Excel</span></button></p>
 
     <div className="main-table">
         <table>
