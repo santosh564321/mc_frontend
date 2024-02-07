@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The CI/CD pipeline is setup in build.yaml, we're using AWS Codepipeline that builds and deploys the application to a S3 bucket configured for static site hosting.
+
+src/pages/ProjectionV2 is the main page.
+
 ## Available Scripts
 
 In the project directory, you can run:

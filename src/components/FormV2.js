@@ -43,6 +43,7 @@ class FormV2 extends Component {
   }
 
   componentDidMount() {
+    // parses if there is any form data that was stored to local storage in a pervious session
     let storage = localStorage.getItem("formState");
     if (storage !== "") {
       console.log(storage);
@@ -64,9 +65,11 @@ class FormV2 extends Component {
   };
 
   handleSubmit = (e) => {
+    // first we persist the form data to local storage
     localStorage.setItem("formState", JSON.stringify(this.state));
     this.setState({ loader: true });
     e.preventDefault();
+    // send the http call
     axios
       .post("http://54.85.0.55/calculate", this.state)
       .then((response) => {
